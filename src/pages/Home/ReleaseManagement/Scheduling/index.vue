@@ -13,6 +13,7 @@
           <!-- <el-button @click="toggleSelection()">取消选择</el-button> -->
           <el-button
             type="danger"
+            
             @click="deleteSelections()"
             :disabled="multipleSelection.length == 0"
             >删除选择</el-button
