@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+// ul,h1,h2,h3,h4,h5,h6{
+//     margin: 0;
+//     padding: 0;
+// }
+
+html,body,#app,.home,.layout-container,.el-container{
+    height: 100%;
+}
+
+body, ul, p, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+.el-menu {
+    text-align: left!important;
+}
+
+.el-menu--collapse .el-submenu__title span {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: inline-block;
+}
+
+.el-menu--collapse .el-menu-item .el-submenu__icon-arrow, .el-menu--collapse .el-submenu .el-submenu__title .el-submenu__icon-arrow {
+    display: none;
+}
+.el-menu-item-group .el-menu-item{
+   padding:0 0 0 30px;
+
+}
+
+.el-menu-item-group .el-menu-item-group__title{
+    padding:0
+}
+
+#nprogress .bar { /*进度条样式*/
+    background: red !important;
+}
+
+.spinner-icon {/*圆圈样式*/
+border-top-color: #f56c6c!important;
+border-left-color: #003df1!important;
+}
+
+/* 在 600 像素或更小的屏幕上，将背景色设置为橄榄色 */
+@media screen and (max-width: 600px) {
+    .el-dialog{
+        width: 90% !important;
+    }
+    .el-dialog__body{
+        max-height: 300px !important;
+        overflow-y: auto;
+        
+    }
+    .el-form-item__label{
+        display: none;
+    }
+    .el-form-item__content{
+        margin-left: 10px !important;
+    }
+}  
