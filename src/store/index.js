@@ -6,7 +6,6 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     collapse: false,
-    isBreadcrumbShow: true,
   },
   getters: {},
   mutations: {

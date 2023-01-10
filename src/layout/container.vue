@@ -72,7 +72,7 @@ export default {
   color: #333;
   // text-align: center;
   // line-height: 160px;
-
+  // overflow: hidden;
   .el-breadcrumb {
     margin-top: 20px;
     margin-bottom: 30px;

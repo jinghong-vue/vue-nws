@@ -121,7 +121,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          //   alert('submit!');
+            // alert('submit!');
           //   console.log(this.ruleForm);
           let { username, password } = this.ruleForm;
           let res = api.loginApi(username, password).then(async (res) => {
@@ -144,6 +144,7 @@ export default {
               this.$router
                 .push("/ReleaseManagement/Scheduling")
                 .catch((err) => {
+                  // alert("Error: " + err)
                   return err;
                 });
             } else {

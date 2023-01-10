@@ -40,6 +40,9 @@ export default {
   //     }
 
   // }
+  
+  // vue 会依次使用 mutaitionObserver Promise setImmediate setTimeout
+
   watch: {
     $route: {
       // 监听路由参数

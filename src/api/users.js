@@ -12,9 +12,9 @@ import { Base64 } from "js-base64"; // 引入
 console.log(process.env);
 console.log(process.env.NODE_ENV);
 
-
-
-
+console.log(process.env['VUE_APP_BASE_URL'])
+console.log(window.domain);
+// process.env['VUE_APP_BASE_URL'] = window.domain
 
 //常规登入
 // http://192.168.1.222/NjnuService/WebApi/NjnuService

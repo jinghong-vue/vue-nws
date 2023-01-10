@@ -25,6 +25,7 @@ router.beforeEach((to, from, next) => {
   //next是个函数，调用之后， 可以理解为放行
   //    console.log(to);
   if (userinfo) {
+    // alert('存在')
     //要判断是否有用户菜单
     // if (!store.state.permission.userMenu.length) {
     //     console.log(store.state.permission.userMenu);
@@ -39,6 +40,7 @@ router.beforeEach((to, from, next) => {
     // }
     next();
   } else {
+    // alert('不存在')
     //没有token(userinfo)
     //1.访问的是登入页
     if (to.path === "/login") {

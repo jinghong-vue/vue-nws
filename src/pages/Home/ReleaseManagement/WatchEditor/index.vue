@@ -210,11 +210,30 @@
       :disabled="scheduleform.publishconfirm"
       >确认发布</el-button
     >
+  
+    <!-- <transition enter-active-class="animate__animated animate__rubberBand" leave-active-class="animate__animated animate__tada">
+      <div class="transcontainer" v-if="transflag">
+          人的一生应该怎样度过
+      </div>
+    </transition>
+    <el-button @click="transflag =! transflag">点击动画效果</el-button>
+     -->
+      <!-- <Modal :visible="modalFlag" @onOk="handleOk" @cancel="handleCancel">
+        <template v-slot:title>
+            <h1>充值提示123</h1>
+        </template>
+        <template v-slot:body>
+            <h3>您正在充值7000000欢乐豆是否确定?</h3>
+        </template>
+      </Modal>
+    <el-button @click="showModal">点击显示模态框</el-button> -->
   </div>
 </template>
 
 <script>
 import * as api from "@/api/users.js";
+import Modal from '@/components/Modal/index.vue'
+import 'animate.css'
 
 let userinfo = JSON.parse(localStorage.getItem("userinfo"));
 console.log(userinfo);
@@ -226,6 +245,8 @@ console.log("areaname,areaid,userid", areaname, areaid, userid);
 export default {
   data() {
     return {
+      modalFlag: false, //
+      transflag: false, //
       scheduleform: {
         date: "", //日期
         selectareaValue: "", //
@@ -267,8 +288,22 @@ export default {
     //获取区域值班人员
     this.getOndutyStaff();
   },
-
+  components: {
+    Modal
+  },
   methods: {
+    //展示模态框
+    showModal(){
+      this.modalFlag = true;
+    },
+    handleOk(){
+      this.modalFlag = false;
+      console.log('确定了');
+    },
+    handleCancel(){
+      this.modalFlag = false
+      console.log('取消了');
+    },
     // 确定提交值班信息(值班人员＋呼机电话)
     confirmSubmitSchedule(data) {
       console.log(data);
@@ -661,5 +696,8 @@ export default {
 }
 .watch {
   text-align: center !important;
+}
+.container{
+  height: 200px;
 }
 </style>
